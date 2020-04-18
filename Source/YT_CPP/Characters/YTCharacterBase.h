@@ -19,14 +19,15 @@ public:
 	// Sets default values for this character's properties
 	AYTCharacterBase();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 	USpringArmComponent* SpringArmComp;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
-	UCameraComponent* CameraComp
-	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Player");
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
+	UCameraComponent* CameraComp;
+
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Player")
 	UStaticMeshComponent* MeshComp;
+	
 
 protected:
 
@@ -35,10 +36,10 @@ protected:
 	void TurnAtRate(float Value);
 	void LookUptAtRate(float Value);
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 	float BaseTurnRate;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
+	//UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 	float BaseLookUpAtRate;
 
 public:	

@@ -31,21 +31,34 @@ AYTCharacterBase::AYTCharacterBase()
 
 void AYTCharacterBase::MoveForward(float Value)
 {
-
+	if ((Controller) && (Value != 0.0f))
+	{
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(0, Rotation.Yaw, 0);
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		AddMovementInput(Direction, Value);
+	}
 }
 
 void AYTCharacterBase::MoveRight(float Value)
 {
-
+	if ((Controller) && (Value != 0.0f))
+	{
+		const FRotator Rotation = Controller->GetControlRotation();
+		const FRotator YawRotation(0, Rotation.Yaw, 0);
+		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+		AddMovementInput(Direction, Value);
+	}
 }
 
 void AYTCharacterBase::TurnAtRate(float Value)
 {
-
+	AddControllerYawInput(Value * BaseTurnRate * GetWorld()->GetDeltaSeconds());
 }
 
 void AYTCharacterBase::LookUptAtRate(float Value)
 {
+	AddControllerPitchInput(Value * BaseLookUpAtRate * GetWorld()->GetDeltaSeconds());
 
 }
 
