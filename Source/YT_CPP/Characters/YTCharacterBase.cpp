@@ -7,7 +7,7 @@
 AYTCharacterBase::AYTCharacterBase()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 }
 
@@ -18,12 +18,6 @@ void AYTCharacterBase::BeginPlay()
 	
 }
 
-// Called every frame
-void AYTCharacterBase::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
 
 // Called to bind functionality to input
 void AYTCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
