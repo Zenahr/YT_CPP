@@ -20,7 +20,7 @@ public:
 	AYTCharacterBase();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
-	USpringArmComponent* SpringArmCom;
+	USpringArmComponent* SpringArmComp;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
 	UCameraComponent* CameraComp
@@ -29,8 +29,6 @@ public:
 	UStaticMeshComponent* MeshComp;
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
 
 	void MoveForward(float Value);
 	void MoveRight(float Value);
