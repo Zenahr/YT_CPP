@@ -38,7 +38,7 @@ protected:
 	void LookUptAtRate(float Value);
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
-	float BaseturnRate;
+	float BaseTurnRate;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
 	float BaseLookUpAtRate;
