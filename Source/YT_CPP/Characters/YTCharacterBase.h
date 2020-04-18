@@ -6,6 +6,10 @@
 #include "GameFramework/Character.h"
 #include "YTCharacterBase.generated.h"
 
+class USpringArmComponent;
+class UCameraComponent;
+class UStaticMeshComponent;
+
 UCLASS()
 class YT_CPP_API AYTCharacterBase : public ACharacter
 {
@@ -14,6 +18,15 @@ class YT_CPP_API AYTCharacterBase : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AYTCharacterBase();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
+	USpringArmComponent* SpringArmCom;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera");
+	UCameraComponent* CameraComp
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Player");
+	UStaticMeshComponent* MeshComp;
 
 protected:
 	// Called when the game starts or when spawned
