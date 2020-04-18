@@ -54,9 +54,18 @@ void AYTCharacterBase::LookUptAtRate(float Value)
 void AYTCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	PlayerInputComponent->BindAxis("MoveForward", this, &AYTCharacterBase::MoveForward);
+	PlayerInputComponent->BindAxis("MoveRight", this, &AYTCharacterBase::MoveRight);
+	
+	// Mouse input
+	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+
+	// Controller input
+	PlayerInputComponent->BindAxis("TurnRate", this, &AYTCharacterBase::TurnAtRate);
+	PlayerInputComponent->BindAxis("LookUpRate", this, &AYTCharacterBase::LookUptAtRate);
 
 }
 
