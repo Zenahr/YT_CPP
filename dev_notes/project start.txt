@@ -1,0 +1,4 @@
+Always start with a blank blueprint project, because the C++ starter templates create non-decoupled file and folder structures.
+
+Project Start -------
+1. Blank project, Blueprint mode
