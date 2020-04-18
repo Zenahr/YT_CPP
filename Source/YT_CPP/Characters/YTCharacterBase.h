@@ -38,7 +38,6 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	float BaseTurnRate;
-
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	float BaseLookUpAtRate;
 
