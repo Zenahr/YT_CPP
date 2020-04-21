@@ -26,7 +26,7 @@ public:
 	float AngleAxis;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ZenRotateAround")
-	UStaticMesh* Mesh;
+	UStaticMeshComponent* Mesh;
 
 	UPROPERTY(EditAnywhere, Category = "ZenRotateAround")
 		AActor* TargetActor;

@@ -9,6 +9,8 @@ ARotateAround::ARotateAround()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+
 	Dimensions = FVector(300, 0, 0);
 	AxisVector = FVector(0, 0, 1);
 	Speed = 50.f;
