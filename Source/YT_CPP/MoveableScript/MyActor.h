@@ -14,13 +14,13 @@ class YT_CPP_API AMyActor : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AMyActor();
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ZenTransform")
 	UStaticMeshComponent* VisualMesh;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FloatingActor")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ZenTransform")
 		float FloatSpeed = 20.0f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FloatingActor")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ZenTransform")
 		float RotationSpeed = 20.0f;
 
 protected:
