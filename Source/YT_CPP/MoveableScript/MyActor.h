@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	AMyActor();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ZenTransform")
-	UStaticMeshComponent* VisualMesh;
+		UStaticMesh* VisualMesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ZenTransform")
 		float FloatSpeed = 20.0f;
