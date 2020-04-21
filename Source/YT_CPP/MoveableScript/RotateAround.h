@@ -25,15 +25,18 @@ public:
 
 	float AngleAxis;
 
-	UPROPERTY(EditAnywhere, Category = "ZenRotate")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ZenRotateAround")
+	UStaticMeshComponent* Mesh;
+
+	UPROPERTY(EditAnywhere, Category = "ZenRotateAround")
 		AActor* TargetActor;
 
-	UPROPERTY(EditAnywhere, Category = "ZenRotate")
+	UPROPERTY(EditAnywhere, Category = "ZenRotateAround")
 		FVector Dimensions;
 
-	UPROPERTY(EditAnywhere, Category = "ZenRotate")
+	UPROPERTY(EditAnywhere, Category = "ZenRotateAround")
 		FVector AxisVector;
 
-	UPROPERTY(EditAnywhere, Category = "ZenRotate")
-		float Multiplier;
+	UPROPERTY(EditAnywhere, Category = "ZenRotateAround")
+		float Speed;
 };

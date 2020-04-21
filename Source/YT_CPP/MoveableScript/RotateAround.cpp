@@ -11,7 +11,7 @@ ARotateAround::ARotateAround()
 
 	Dimensions = FVector(300, 0, 0);
 	AxisVector = FVector(0, 0, 1);
-	Multiplier = 50.f;
+	Speed = 50.f;
 
 }
 
@@ -28,7 +28,7 @@ void ARotateAround::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	FVector NewLocation = TargetActor->GetActorLocation();
-	AngleAxis += DeltaTime * Multiplier;
+	AngleAxis += DeltaTime * Speed;
 
 	if (AngleAxis >= 360.f)
 	{
